@@ -1,0 +1,71 @@
+doctype html
+html( lang="fr" )
+    head
+        meta( charset="UTF-8" )/
+        title flatLand! • code design things
+
+        link( rel="author" href="humans.txt" )/
+        meta( name="keywords"  content="flatland, flatland!, flatLand!, Belgium, Belgique, Liège, création site web, site web, webdesign, Pierre-Antoine Delnatte, Delnatte, Pierre-Antoine, INPRES, WIF 2006, Belgique, accessibilité, standards, conforme, xhtml, css, javascript, node.js, php, mysql, mongodb, redis, xml, xsl, rss, atom, cms, application, js, jquery, prototype, iphone, ipad, app, backbone, ember, angular, react, grunt, gulp, ES2015, underscore, freelance, indépendant" )/
+        meta( name="description"  content="flatLand! • code design things - design, web, applications, developpement" )/
+
+        meta( name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" )/
+
+        link( rel="shortcut icon" type="image/png" href="favicon.png" )/
+
+        link( rel="stylesheet" href="assets/css/styles.min.css" )/
+
+        include partials/compat.pug
+
+    body
+        main.wrapper
+            div.card
+                header.card__face.header
+                    h1.header__title
+                        a.header__link.logo
+                            svg.logo__name( version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="-40.874 0 318.127 87.82" )
+                                title flatLand!
+                                include ../svg/logo-no-root.svg
+                            svg.logo__star( version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.416 24.169" )
+                                polygon( points="12.708,0 16.635,7.957 25.416,9.232 19.061,15.425 20.561,24.169 12.708,20.042 4.854,24.169 6.354,15.425 0,9.232 8.781,7.957" )/
+                            svg.logo__radial( version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 595.28 595.28" )
+                                include ../svg/radial-no-root.svg
+                            span.logo__code code
+                            span.logo__design design
+                            span.logo__things things
+                section.card__back.back
+                    h2.back__title À propos de flatLand!
+                    .back__presentation
+                        p.
+                            #[strong flatLand!] conçoit et développe des sites &amp; applications accessibles et dynamiques en utilisant les dernières technologies web.
+
+                    ul.back__skills
+                        li
+                            strong design &amp; développement web
+                        li missions, sous-traitance
+                        li conseil &amp; consultance
+
+                    .back__coords.coords
+                        strong.coords__name flatLand!
+                        a.coords__link( href="http://pierre-antoine.delnatte.be" ) Pierre-Antoine Delnatte
+                        a.coords__link.coords__link--phone( href="tel:0032498323770" ) +32 (0)498 32 37 70
+                        a.coords__link( href="mailto:info@flatland.be" ) info@flatland.be
+                        a.coords__link( href="http://www.flatland.be" ) www.flatland.be
+            nav.utils
+                h2.utils__title Actions
+
+                a.utils__link.utils__link--vcard( href="assets/files/flatland.vcf" )
+                    include ../svg/icons/download.svg
+                    = " "
+                    | télécharger la vcard
+                a.utils__link.utils__link--flip( href="javascript:void(0);" )
+                    include ../svg/icons/flip.svg
+                    = " "
+                    | retourner
+
+            footer.footer
+                p.footer-content
+                    small.
+                        ©2012-#{ ( new Date() ).getFullYear() } •
+                        #[a( href="https://github.com/leny/flatland.be" ) Consulter les sources du site sur GitHub].
+
+        script( src="assets/js/script.min.js" async )
