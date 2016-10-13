@@ -1,0 +1,27 @@
+/* leny/bizniskat
+ *
+ * /src/stylus/base/links.styl - Base styles for textual links
+ *
+ * coded by leny@flatLand!
+ * started at 09/10/2016
+ */
+
+p
+    margin 0 auto .7rem
+    font normal 1.4rem/1.25 MavenPro
+    strong
+        font-weight 800
+    em
+        font-weight 600
+        font-style normal
+    abbr
+        text-decoration none
+        cursor help
+        border-bottom .1rem dotted linkColor
+        transition border-color .25s ease-in-out
+        &:hover
+            border-bottom-color lighten( linkColor, 15% )
+
++media-query( all, min-width 1025px )
+    p
+        font normal 1.5rem/1.25 MavenPro

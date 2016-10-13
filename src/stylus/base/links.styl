@@ -1,0 +1,21 @@
+/* leny/bizniskat
+ *
+ * /src/stylus/base/links.styl - Base styles for links
+ *
+ * coded by leny@flatLand!
+ * started at 09/10/2016
+ */
+
+links( link = linkColor, hover = linkHoverColor )
+    a
+        border-bottom .1rem dotted link
+        color link
+        text-decoration none
+        transition color .25s ease-in-out
+        &:visited
+            color link
+        &:hover
+        &:active
+            color hover
+
+links()
