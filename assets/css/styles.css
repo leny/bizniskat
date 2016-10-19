@@ -1,0 +1,537 @@
+/* leny/bizniskat
+ *
+ * /src/stylus/styles.styl - Main styles
+ *
+ * coded by leny@flatLand!
+ * original styles in march 2013
+ * rewriten with stylus/kouto-swiss in october 2016
+ */
+@font-face {
+  font-family: "MavenPro";
+  font-weight: normal;
+  src: url("../fonts/mavenpro/mavenpro-regular-webfont.eot");
+  src: local("MavenPro"), url("../fonts/mavenpro/mavenpro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/mavenpro/mavenpro-regular-webfont.woff") format("woff"), url("../fonts/mavenpro/mavenpro-regular-webfont.ttf") format("truetype"), url("../fonts/mavenpro/mavenpro-regular-webfont.svg#MavenPro") format("svg");
+}
+@font-face {
+  font-family: "MavenPro";
+  font-weight: 600;
+  src: url("../fonts/mavenpro/mavenpro-medium-webfont.eot");
+  src: local("MavenPro"), url("../fonts/mavenpro/mavenpro-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/mavenpro/mavenpro-medium-webfont.woff") format("woff"), url("../fonts/mavenpro/mavenpro-medium-webfont.ttf") format("truetype"), url("../fonts/mavenpro/mavenpro-medium-webfont.svg#MavenPro") format("svg");
+}
+@font-face {
+  font-family: "MavenPro";
+  font-weight: 800;
+  src: url("../fonts/mavenpro/mavenpro-bold-webfont.eot");
+  src: local("MavenPro"), url("../fonts/mavenpro/mavenpro-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/mavenpro/mavenpro-bold-webfont.woff") format("woff"), url("../fonts/mavenpro/mavenpro-bold-webfont.ttf") format("truetype"), url("../fonts/mavenpro/mavenpro-bold-webfont.svg#MavenPro") format("svg");
+}
+.hidden {
+  display: none;
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+html {
+  width: 100%;
+  height: 100%;
+  background: #000 url("../images/black_linen_v2.png") center repeat;
+  font: normal 62.5%/1.5 "MavenPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (min--moz-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 1.5/1), all and (min-device-pixel-ratio: 1.5), all and (min-resolution: 144dpi), all and (min-resolution: 1.5dppx) {
+  html {
+    background: #000 url("../images/black_linen_v2_@2X.png") center repeat;
+    background-size: 640px;
+  }
+}
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 7.5rem 0;
+}
+@media all and (min-width: 1025px) {
+  body {
+    padding: 0;
+  }
+}
+p,
+li {
+  margin: 0 auto 0.7rem;
+  font: normal 1.5rem/1.25 "MavenPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+p strong,
+li strong {
+  font-weight: 800;
+}
+p em,
+li em {
+  font-weight: 600;
+  font-style: normal;
+}
+p abbr,
+li abbr {
+  text-decoration: none;
+  cursor: help;
+  border-bottom: 0.1rem dotted #08c;
+  -webkit-transition: border-color 0.25s ease-in-out;
+  transition: border-color 0.25s ease-in-out;
+}
+p abbr:hover,
+li abbr:hover {
+  border-bottom-color: #00a7fa;
+}
+ul,
+ol {
+  list-style: inside none;
+  margin: 0;
+  padding: 0;
+}
+ul li,
+ol li {
+  margin: 0 auto;
+}
+@media all and (min-width: 1025px) {
+  p {
+    font: normal 1.5rem/1.25 "MavenPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+}
+a {
+  color: #08c;
+  text-decoration: none;
+  -webkit-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+}
+a:visited {
+  color: #08c;
+}
+a:hover,
+a:active {
+  color: #069;
+}
+.wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.card {
+  width: 90%;
+  height: auto;
+  min-width: 30rem;
+  margin: 0 auto 1rem;
+}
+.card__face {
+  margin: 0 auto 1rem;
+}
+.card__back {
+  margin: 0 auto;
+}
+.header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.header__title {
+  margin: 0;
+}
+.header__link {
+  display: block;
+  width: 20rem;
+  height: 12rem;
+}
+.logo {
+  position: relative;
+}
+.logo__name {
+  position: relative;
+  width: 20rem;
+  height: 6rem;
+  z-index: 120;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.logo__star {
+  position: absolute;
+  top: 6.7rem;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  width: 1.6rem;
+  height: 1.6rem;
+  z-index: 105;
+  -webkit-transform: translate(-50%, -60%);
+  -ms-transform: translate(-50%, -60%);
+  transform: translate(-50%, -60%);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.logo__radial {
+  position: absolute;
+  top: -23.5rem;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  width: 60rem;
+  height: 60rem;
+  z-index: 95;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)";
+  filter: alpha(opacity=5);
+  opacity: 0.05;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+.logo__code,
+.logo__design,
+.logo__things {
+  display: inline-block;
+}
+.logo__code {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  bottom: auto;
+  left: auto;
+  -webkit-transform: translate(-1.8rem, 0);
+  -ms-transform: translate(-1.8rem, 0);
+  transform: translate(-1.8rem, 0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.logo__design {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  -webkit-transform: translate(1.8rem, 0);
+  -ms-transform: translate(1.8rem, 0);
+  transform: translate(1.8rem, 0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.logo__things {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  -webkit-transform: translate(-38%, 1.8rem);
+  -ms-transform: translate(-38%, 1.8rem);
+  transform: translate(-38%, 1.8rem);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.logo__things::after {
+  content: ".";
+}
+.back__title {
+  display: none;
+}
+.back__skills {
+  margin: 0 auto 1rem;
+}
+.coords__name,
+.coords__link {
+  display: block;
+}
+.utils__title {
+  display: none;
+}
+.utils__link--flip {
+  display: none;
+}
+.footer {
+  display: none;
+}
+.card {
+  overflow: hidden;
+  background: #fff url("../images/lightpaperfibers.png") center repeat;
+  -webkit-box-shadow: 0 0.5rem 4rem #000;
+  box-shadow: 0 0.5rem 4rem #000;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.3), all and (min--moz-device-pixel-ratio: 1.3), all and (-o-min-device-pixel-ratio: 1.3/1), all and (min-device-pixel-ratio: 1.3), all and (min-resolution: 125dpi), all and (min-resolution: 1.3dppx) {
+  .card {
+    background: #fff url("../images/lightpaperfibers_@2X.png") center repeat;
+  }
+}
+.header {
+  padding: 4rem 0 0;
+}
+.header__link {
+  color: #000;
+  text-decoration: none;
+}
+.logo__radial {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)";
+  filter: alpha(opacity=5);
+  opacity: 0.05;
+}
+.logo__code,
+.logo__design,
+.logo__things {
+  font: 800 1.4rem/1 "MavenPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000;
+  text-transform: uppercase;
+}
+.logo__things::after {
+  -ms-filter: none;
+  filter: none;
+  opacity: 1;
+}
+.back {
+  padding: 0 1rem 1rem;
+  color: #000;
+}
+.back__skills {
+  list-style: none inside;
+}
+.back__coords {
+  text-align: right;
+}
+.coords__name {
+  font-size: 1.5rem;
+}
+.coords__link {
+  font-size: 1.4rem;
+}
+.utils {
+  width: 90%;
+  height: auto;
+  min-width: 30rem;
+}
+.utils__link {
+  font-size: 1.6rem;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 0.5rem 4rem #000;
+}
+.utils__link svg {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  vertical-align: middle;
+}
+.utils__link svg path {
+  fill: #fff;
+}
