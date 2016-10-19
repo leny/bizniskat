@@ -6,9 +6,9 @@
  * started at 09/10/2016
  */
 
-p
+p, li
     margin 0 auto .7rem
-    font normal 1.4rem/1.25 MavenPro
+    font normal 1.5rem/1.25 MavenPro
     strong
         font-weight 800
     em
@@ -21,6 +21,13 @@ p
         transition border-color .25s ease-in-out
         &:hover
             border-bottom-color lighten( linkColor, 15% )
+
+ul, ol
+    list-style inside none
+    margin 0
+    padding 0
+    li
+        margin 0 auto
 
 +media-query( all, min-width 1025px )
     p
